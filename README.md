@@ -26,7 +26,7 @@ We pride ourselves on offering only the best products at fair prices, and we sta
 
 We understand the importance of a good night's sleep and a comfortable home, that's why we are dedicated to providing you with the best products and services.
 
-Thank you for choosing Better Living Home. We hope that our products will help you create a warm and welcoming space that you'll love.
+Thank you for choosing Bridal.com. We hope that our products will help you create a warm and welcoming space that you'll love.
 
 ### How to use this website
 Browse through our wide variety of mattresses and find the perfect fit for your needs and preferences.
