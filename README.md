@@ -1,9 +1,11 @@
 # quack-cloth-4807
 E-commerce website 
 Welcome to - 
-# David's Bridal
+#  Bridal.com
  
-At David's Bridal, we believe that a comfortable home is the foundation of a happy life. That's why we're dedicated to providing our customers with high-quality bed mattresses, toiletries, and kitchen accessories to help them create a cozy and inviting space they'll love.
+ Bridal.com
+about us
+We live for coffee, pet videos, and celebrations! What started in 1950 as a single Florida bridal salon has grown into an international destination for weddings, proms, quinceañeras, and more. We know a bit about making dreams come true—one in three brides in the U.S. purchases her dress from us—and we can’t wait to help you get ready for the big event, party, gala, shindig, or soirée.
 
 Our story began when our founder, Jane, was struggling to find a comfortable mattress for her own home. Frustrated with the lack of options and high prices on the market, she decided to take matters into her own hands and started doing research on the best materials and construction techniques for mattresses.
 
@@ -26,7 +28,9 @@ We are here to help you make your home a better place to live in.
 
 Deployed link : 
 
-API link : 
+API link 1:  
+API link 2: 
+API link 3:
 
 
 
