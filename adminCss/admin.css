@@ -1,0 +1,138 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap'); */
+
+@import url("https://fonts.googleapis.com/css2?family=Labrada&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Labrada", serif;
+}
+nav {
+  width: 100%;
+  height: 8vh;
+  background-color: #132122;
+  color: white;
+  font-size: 22px;
+  display: flex;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav img {
+  width: 99.5%;
+}
+nav span:nth-child(1) {
+  background-color: #132122;
+  width: 20%;
+}
+nav span:nth-child(2) {
+  width: 20%;
+  margin: auto;
+  letter-spacing: 5px;
+}
+.searchingFilter {
+  position: absolute;
+  top: 10vh;
+  right: 20vw;
+  width: 40vw;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-image: url("https://cdn-icons-png.flaticon.com/512/61/61088.png"),
+    none;
+  background-size: 5%;
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+}
+.searchingFilter:focus{
+    background-color: #132122;
+    color: white;
+}
+#adminPannel {
+  display: flex;
+  width: 100%;
+}
+#sideBar {
+  position: sticky;
+  top: 0;
+  width: 20%;
+  height: 100vh;
+  padding:100px 50px 50px 50px;
+  background-color: #ffffff;
+  border: 1px solid rgb(39, 38, 38);
+  border-width: 0px 2px 0px 0px;
+  color: rgb(1, 255, 242);
+}
+#sideBar p {
+  border: 1px transparent;
+  background-color: #132122;
+  border-radius: 10px;
+  width: 110%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 7vh;
+  font-size: 22px;
+  margin-top: 30px;
+}
+#sideBar p:hover {
+  color: rgb(0, 255, 255);
+  cursor: pointer;
+}
+
+/* main styling*/
+
+#main {
+  /* background-color: red; */
+  width: 80%;
+}
+.mainDiv {
+  width: 80%;
+  margin: auto;
+  background-color: #132122;
+  margin-top: 12vh;
+  border: 2px solid rgba(73, 71, 71, 0.664);
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.76);
+}
+.card {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  /* width: 100%; */
+  border: 2px solid white;
+  font-size: 15px;
+  height: 7vh;
+  align-items: center;
+  color: white;
+}
+.card button {
+  color: red;
+  width: 90%;
+}
+.card p {
+  /* width: 50%; */
+  /* border: 1px solid wheat; */
+  text-align: center;
+}
+.mainCard {
+  font-size: 22px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  background-color: #ffffff;
+  color: #e0208f;
+  text-align: center;
+}
+.mainCard p {
+  /* width: 50%; */
+  text-align: center;
+  /* border: 1px solid black; */
+}
+.mainCard h4 {
+  width: 80%;
+  /* border: 1px solid black; */
+}
