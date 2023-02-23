@@ -1,13 +1,6 @@
 // api here
 
 
-
-
-
-
-
-
-
 //getting id's from document here
 
 //navBar id's
@@ -197,8 +190,6 @@ form.addEventListener("submit",(e)=>{
     e.preventDefault();
 
     postProduct(title,brand,image,price,color,fabric);
-   
-
 })
 }
 
@@ -282,9 +273,6 @@ console.log(error);
     }
 
 }
-
-
-
 
 
 //orders eventListner
