@@ -54,8 +54,8 @@
             text-align: center;
         }  
         .social{
-            margin: 0px 0px 15px !important;
-    display: flex !important;
+            margin: 0px 0px 15px ;
+    display: flex;
 
         }
         
@@ -356,7 +356,15 @@ h4{
         })
         </script> 
        <script> 
-      
+       // --- do not touch  ↓↓↓↓↓↓↓↓↓↓↓↓ ----------
+const baseServerURL = `http://localhost:${
+  import.meta.env.REACT_APP_JSON_SERVER_PORT
+}`;
+// --- do not touch  ↑↑↑↑↑↑↑↑↑↑↑↑ ----------
+
+// ***** Constants / Variables ***** //
+const userRegisterURL = `${baseServerURL}/register`;
+const userLoginURL = `${baseServerURL}/login`;
         var submit = document.getElementById("sub"); 
         var form = document.getElementById("submit");
         
@@ -414,8 +422,10 @@ h4{
     alert("please select checkbox");
     return;
   }   
-         else{
-          let obj = {
+         else{ 
+          async function RegisterUser(){
+          try{ 
+          const obj = {
             email:email, 
             fname:fname,
             lname:lname,
@@ -423,15 +433,23 @@ h4{
             dob:dob,
             pass:pass,
           }  
-            arr.push(obj) 
-          console.log(arr)  
-          localStorage.setItem("user",JSON.stringify(arr))
-            
-          window.location.href="./login.html"
-          }
-          
+
+      let register_request = await fetch(`${userRegisterURL}`,{
+        method : 'POST',
+        headers : {
+          "Content-Type" : 'application/json'
+        },
+        body : JSON.stringify(obj)
+      }) 
+      
+      console.log(register_request);
+      
+  } catch (error) {
+    console.log(error);
+  }
+}
   
-        }) 
+        })
         
         </script>
 
