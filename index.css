@@ -22,8 +22,16 @@ background-color: #132122;
    
 }
 .logo{
-    width:20%;
+    width:25%;
+    /* border: 2px solid blue; */
+    background-color: white;
 }
+
+.logo>img{
+    border:none;
+    
+}
+
 
 
 .primary img{
@@ -39,6 +47,7 @@ background-color: #132122;
 }
 .secondary h4{
     color:white;
+    font-size:20px;
 }
 .details>button{
     /* text-align: center; */
@@ -94,7 +103,7 @@ background-color: #132122;
     padding-top: 60px;
   }
 
-  .utilities input[type=text] {
+  .search input[type=text] {
     float: right;
     padding: 6px;
     margin-top: 8px;
@@ -106,12 +115,117 @@ background-color: #132122;
     display: flex;
     width:100%;
     height:60px;
+    justify-content: space-between;
 
   }
 
-  #header2>div{
+  /* #header2>div{  
     border: 2px solid black;
-  }
+  } */
   .logo1>img{
+    height:70%;
+  }
+
+  
+  .utilities>img{
+   height:70% ;
+    padding-right: 20px;
+  }
+
+  .wedding{
+    display: flex;
+    width:100%;;
+  }
+  .wedding>div{
+    /* border:2px solid orange; */
+    height:500px
+  }
+  .wedding>div:nth-child(1){
+    width:3000px;
+     /* border:2px solid orange;  */
+
+  }
+
+  .wedding>div:nth-child(1)>img{
     height:100%;
+    width:100%;
+
+  }
+  /* .beautiful>div>button{
+    display:block;
+  } */
+ .beautiful>div>img{
+    width:100%;
+    height: 350px;
+    
+ }
+  
+   
+  .beautiful>div{
+    background-color: black;
+    /* border: 2px solid blue; */
+    height:100%;
+  }
+  .beautiful button{
+     margin: 30px 0 0 90px;
+     background-color: #132122;
+     color: white;
+     border:2px solid white;
+  }
+
+ 
+  /*---- EXCLUSIVE -----*/
+.brands{
+    /* border: 2px solid seagreen; */
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    width:80%;
+    margin-left: 160px;
+    
+}
+
+  .exclusive>h1{
+    text-align: center;
+    padding:50px;
+    font-size: 50px;
+  }
+
+  .btn{
+    font-size: 40px;
+    padding: 10px;
+    border:2px solid black;
+    margin:50px;
+    transform: translateX(550px); 
+  }
+
+  .savings>h1{
+    text-align: center;
+    padding:50px;
+    font-size: 50px;
+  }
+  
+  .love{
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+    /* border: 2px solid rebeccapurple; */
+    height: 500px;
+  }
+  .love>div{
+    width:70%;
+   
+    /* border: 2px solid lawngreen; */
+    margin-left: 50px;
+  }
+  .love>div>img{
+    width:100%;
+    height:80%;
+  }
+
+  .love>div>p{
+    text-align: center;
+    margin-top: 10px;
+  }
+  .wink>h3{
+    color:#925862;
+    font-family: ABScript;
   }
