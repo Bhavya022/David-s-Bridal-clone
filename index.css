@@ -1,0 +1,117 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+/*------ HEADER1 -------*/
+
+#header1{
+display:flex ;
+justify-content: space-between;
+/* border:2px solid red; */
+height:40px;
+background-color: #132122;
+}
+
+
+.primary{
+    display: flex;
+    /* border:2px solid blue; */
+    justify-content:space-between;
+    width:30%;
+   
+}
+.logo{
+    width:20%;
+}
+
+
+.primary img{
+    /* border:2px solid black; */
+    width:100%;
+    height:100%;
+   }
+.secondary{
+    display: flex;
+    justify-content: space-evenly;
+    width:40%;
+
+}
+.secondary h4{
+    color:white;
+}
+.details>button{
+    /* text-align: center; */
+    /* border: 2px solid orange; */
+    padding:9px;
+    background-color:#132122 ;
+    color:white;
+}
+.secondary img{
+    width: 100%;
+    height: 100%;
+}
+
+
+
+/*---------- NAVBAR ------------ */
+#navbar {
+    overflow: hidden;
+    background-color:white;
+  }
+  
+  #navbar a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  #navbar a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  /* #navbar a.active {
+    background-color: #04AA6D;
+    color: white;
+  } */
+  
+  .content {
+    padding: 16px;
+  }
+  
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  
+  .sticky + .content {
+    padding-top: 60px;
+  }
+
+  .utilities input[type=text] {
+    float: right;
+    padding: 6px;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 15px;
+  }
+
+  #header2 {
+    display: flex;
+    width:100%;
+    height:60px;
+
+  }
+
+  #header2>div{
+    border: 2px solid black;
+  }
+  .logo1>img{
+    height:100%;
+  }
