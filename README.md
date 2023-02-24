@@ -39,9 +39,10 @@ We are here to help you make your home a better place to live in.
 
 Deployed link : 
 
-API link 1:  
-API link 2: 
+API link 1:  productApi='https://63f43aabfe3b595e2eef9ab6.mockapi.io/products'
+API link 2:  usersApi='https://63f43aabfe3b595e2eef9ab6.mockapi.io/users'
 API link 3:
+
 
 
 
