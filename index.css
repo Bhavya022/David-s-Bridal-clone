@@ -1,7 +1,8 @@
 *{
-    margin:0;
-    padding:0;
+    margin:0px;
+    padding:0px;
 }
+
 
 /*------ HEADER1 -------*/
 
@@ -84,10 +85,10 @@ background-color: #132122;
     color: black;
   }
   
-  /* #navbar a.active {
+   #navbar a.active {
     background-color: #04AA6D;
     color: white;
-  } */
+  }
   
   .content {
     padding: 16px;
@@ -191,11 +192,11 @@ background-color: #132122;
   }
 
   .btn{
-    font-size: 40px;
+    font-size: 20px;
     padding: 10px;
     border:2px solid black;
     margin:50px;
-    transform: translateX(550px); 
+    transform: translateX(620px); 
   }
 
   .savings>h1{
@@ -225,7 +226,261 @@ background-color: #132122;
     text-align: center;
     margin-top: 10px;
   }
+  .wink{
+    background-color: #FAF4EF;
+  }
   .wink>h3{
     color:#925862;
-    font-family: ABScript;
+    font-style: italic ;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 60px;
   }
+
+  .wink> h1{
+    text-align: center;
+    /* font-family: 'Times New Roman', Times, serif; */
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 40px;
+  }
+
+  .wink>p{
+    text-align: center;
+    font-size: 30px;
+  }
+  /* .looks>div{
+    border:2px solid black;
+    
+  } */
+  .looks>div:nth-child(1)>img{
+    height:80%;
+    margin-top: 50px;
+    
+  }
+  .looks>div:nth-child(2)>img{
+    margin-top: 150px;
+  }
+
+  .looks{
+    display: flex;
+    /* border: 2px solid green; */
+   justify-content: center;
+   background-color: #FAF4EF;
+  }
+
+  .looks h3{
+    margin-top: 20px;
+  }
+  .celebration>a>img{
+    /* border: 2px solid blue; */
+    width:100%;
+   
+  }
+
+  .design>img{
+   width:100%;
+  }
+  .perfect{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px ;
+    /* border: 2px solid purple; */
+  }
+  .perfect>div>img{
+    width:100%;
+    height:80%;
+  }
+  .perfect h3{
+    text-align: center;
+  }
+  .perfect>div{
+    /* border: 2px solid red; */
+    width:70%;
+    margin-left: 70px;
+  }
+
+  /* <!--------------- SLIDESHOW ------------------------> */
+
+
+  * {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  padding-top:100px;
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+   /* <!--------------- SLIDESHOW ------------------------> */
+
+
+.serve>img{
+    width:100%;
+   }
+
+.fierce{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap:20px;
+  transform: translateY(-04px); 
+ 
+}
+/* .fierce>div{
+  border:2px solid #04AA6D;
+} */
+.fierce img{
+  width:100%;
+  height:70%;
+}
+
+.fierce h3,h6,p{
+  text-align: center;
+  margin-top: 10px;
+}
+.more>img{
+  width:100%;
+  height: 100%;
+  /* border: 1px solid green; */
+}
+.more{
+  /* border: 1px solid orangered */
+  background-color: #FFFFFF ;
+}
+.ways{
+  display:flex;
+  /* border: 1px solid green;*/
+  transform: translateY(-04px); 
+  justify-content: center;
+  background-color: #FAF4EF ;
+  
+}
+.ways>div{
+  /* border: 2px solid blue; */
+  width:20%;
+  height: 50vh;
+}
+.ways img{
+  width:100%;
+  height: 80%;
+}
+.ways>div:nth-child(1){
+  margin-right: 100px;
+}
+.ways>div:nth-child(3){
+  margin-left: 100px;
+}
+.ways h2,h5{
+  text-align: center;
+  margin-top: 10px;
+}
+
+/*------OUR PARTNERS-------- */
+
+.our>img{
+  width:100%;
+}
+
+.partners{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+
+}
+.partners>div{
+  /* border:2px solid blue; */
+  width:70%;
+  margin-left: 60px;
+}
+.partners img{
+  width:100%;
+}
+.partners h2,h5{
+  margin-top: 10px;
+  text-align: center;
+  color: black;
+}
+/* <!------ FOOTER -------> */
+
+.footer>div{
+  border:2px solid blue;
+}
+
+/* <!-- ----FOOTER END ---------> */
