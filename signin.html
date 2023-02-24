@@ -155,7 +155,9 @@
 } 
      .inputField {
   position: relative; 
-  width: 100%;
+  width: 100%; 
+  display: flex; 
+  justify-content: center;
 }
 
 .inputField input {
@@ -307,36 +309,40 @@ h4{
       
       form.addEventListener("submit",(e)=>{   
         e.preventDefault() 
-        var e = JSON.parse(localStorage.getItem("email"))||[]
-        var arr= JSON.parse(localStorage.getItem("user"))||[]  
-        var email =document.getElementById("email").value;
-      var fname = document.getElementById("fname").value; 
-      var lname = document.getElementById("lname").value;
-      var mobile = document.getElementById("mob").value; 
-      var dob = document.getElementById("birthday").value;
-      var pass = document.getElementById("pass").value; 
-       var e = JSON.parse(localStorage.getItem("email"))||[]  
-       if(mobile.length>10 || mobile.length<10){
-        alert("mobile no should be of 10 Digits")
-       } 
-       else{
-        let obj = {
-          email:email, 
-          fname:fname,
-          lname:lname,
-          mobile:mobile,
-          dob:dob,
-          pass:pass,
-        }  
-          arr.push(obj) 
-        console.log(arr)  
-        localStorage.setItem("user",JSON.stringify(arr))
-          
-        window.location.href="./signin1.html"
-        }
         
+        var email =document.getElementById("email").value;
+      var pass = document.getElementById("pass").value; 
 
-      }) 
+        
+         async function LoginUser(){
+    const login_details = {
+      username : email,
+      password : pass,
+    }
+
+    try { 
+    let res = await fetch(`https://main-server-qat8.onrender.com/users`, {
+      method: "POST",
+      headers: {
+        "Content-type": "application/json",
+      },
+      body: JSON.stringify(login_details),
+    });
+
+    let data = await res.json();
+    console.log("login ", data);
+    localStorage.setItem("localAccessToken", data.username);
+    localStorage.setItem("userId", data.user.password)
+    alert("user successfully logged in.");
+  } catch (error) {
+    alert("Username/Password is wrong", JSON.stringify(error));
+  }
+  }
+        
+  LoginUser()   
+   
+      } )
+      
       
       </script>
 </body> 

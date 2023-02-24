@@ -157,7 +157,9 @@
 } 
      .inputField {
   position: relative; 
-  width: 100%;
+  width: 100%; 
+  justify-content: center; 
+  display: flex;
 }
 
 .inputField input {
@@ -356,15 +358,7 @@ h4{
         })
         </script> 
        <script> 
-       // --- do not touch  ↓↓↓↓↓↓↓↓↓↓↓↓ ----------
-const baseServerURL = `http://localhost:${
-  import.meta.env.REACT_APP_JSON_SERVER_PORT
-}`;
-// --- do not touch  ↑↑↑↑↑↑↑↑↑↑↑↑ ----------
 
-// ***** Constants / Variables ***** //
-const userRegisterURL = `${baseServerURL}/register`;
-const userLoginURL = `${baseServerURL}/login`;
         var submit = document.getElementById("sub"); 
         var form = document.getElementById("submit");
         
@@ -380,8 +374,8 @@ const userLoginURL = `${baseServerURL}/login`;
         var dob = document.getElementById("birthday").value;
         var pass = document.getElementById("pass").value; 
         var con=document.getElementById("pass1").value; 
-        var checkbox=document.getElementById("checkbox").value;
-         var e = JSON.parse(localStorage.getItem("email"))||[]  
+        var checkbox=document.getElementById("checkbox");
+         //console.log(e,arr,email,fname,lname,mobile,dob,pass,con,checkbox)
          
      if (
     email === "" 
@@ -403,29 +397,25 @@ const userLoginURL = `${baseServerURL}/login`;
   }
   
   else if (pass != con) {
-    e.preventDefault();
     
       alert("The passwords you have entered do not match. Please try again.")
 
       alert("Password must contain at least 1 Uppercase , 1 lowercase , 1 number and 1 special Character.")
     return;
   } else if (pass.length < 8 && pass.length != 0) {
-    e.preventDefault();
-    errorMessage(
       alert("Password must be a minimum of 8 characters and cannot exceed 70 characters")
-    );
-    errorMessage(
       alert("Password must contain at least 1 Uppercase , 1 lowercase , 1 number and 1 special Character.")
-    );
+    
     return;
-  }else if(checkbox==false){
+  }else if(checkbox.checked==false){
     alert("please select checkbox");
     return;
   }   
+
          else{ 
-          async function RegisterUser(){
+           async function RegisterUser(){
           try{ 
-          const obj = {
+          let obj = {
             email:email, 
             fname:fname,
             lname:lname,
@@ -433,22 +423,35 @@ const userLoginURL = `${baseServerURL}/login`;
             dob:dob,
             pass:pass,
           }  
-
-      let register_request = await fetch(`${userRegisterURL}`,{
+          let register_request = await fetch(`https://main-server-qat8.onrender.com/users`,{
         method : 'POST',
         headers : {
           "Content-Type" : 'application/json'
         },
         body : JSON.stringify(obj)
       }) 
-      
+      if(register_request.ok==true){
+        console.log("user registered")
+      } 
+      else{
+        console.log("Aww....")
+      }
       console.log(register_request);
+
+        console.log(obj)
+      }
+        catch(sakshi){
+          console.log(sakshi);
+        }
+      }
+RegisterUser();
+    }
+//       
       
-  } catch (error) {
-    console.log(error);
-  }
-}
-  
+//   } catch (error) {
+//     console.log(error);
+//   }
+// }
         })
         
         </script>
