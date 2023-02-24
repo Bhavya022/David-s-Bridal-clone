@@ -118,7 +118,8 @@ finalTotal=totalPrice%10*10+(Math.floor((totalPrice*2)/100))+totalPrice;
   }
 
 function calculatingFinal(data){
-  subTotal.innerText=data;
+  subTotal.innerText=data/2;
+  localStorage.setItem("totalAmmount",(data));
   
 }
 
