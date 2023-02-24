@@ -1,0 +1,458 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="appleid-signin-client-id" content="[CLIENT_ID]">
+        <meta name="appleid-signin-scope" content="[SCOPES]">
+        <meta name="appleid-signin-redirect-uri" content="[REDIRECT_URI]">
+        <meta name="appleid-signin-state" content="[STATE]"> 
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+        <script src="https://apis.google.com/js/api:client.js"></script>
+    <title></title>
+    <style>
+ body{
+            background-color: #f7f1eb;
+        } 
+        h5{
+            font-size: 11px;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 1.65px;
+    line-height: 15px;
+    margin: 0px 0px 16px;
+        } 
+        .logo{
+            display: flex; 
+            width:30%;
+            text-align: center; 
+            justify-content: center ;
+    margin: auto;
+        
+        } 
+        .logos{
+            display: flex;
+    padding: 0px 12px; 
+       width: 70%;
+        }  
+        .main{
+            
+    flex-wrap: wrap; 
+    width:30%;
+    justify-content: center; 
+    flex: 0 0 75%;
+    max-width: 75%; 
+    margin:auto; 
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px; 
+    background-color: white; 
+    border-radius: 5px;
+        } 
+        h3{
+            text-align: center;
+        }  
+        .social{
+            margin: 0px 0px 15px ;
+    display: flex;
+
+        }
+        
+        .loginBtn {
+  box-sizing: border-box;
+  position: relative;
+  /* width: 13em;  - apply for fixed size */
+  margin:auto;
+  padding: 0 15px 0 30px;
+  border: none;
+  text-align: center;
+  line-height: 34px;
+  white-space: nowrap;
+  border-radius: 0.2em;
+  font-size: 16px;
+  color: #FFF; 
+  
+}
+.loginBtn:before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 34px;
+  height: 100%;
+}
+.loginBtn:focus {
+  outline: none;
+}
+.loginBtn:active {
+  box-shadow: inset 0 0 0 32px rgba(0,0,0,0.1);
+}
+
+.loginBtn {
+  box-sizing: border-box;
+  position: relative;
+  /* width: 13em;  - apply for fixed size */
+  margin: 0.2em;
+  padding: 0 15px 0 46px;
+  border: none;
+  text-align: left;
+  line-height: 34px;
+  white-space: nowrap;
+  border-radius: 0.2em;
+  font-size: 16px;
+  color: #FFF;
+}
+.loginBtn:before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 34px;
+  height: 100%;
+}
+.loginBtn:focus {
+  outline: none;
+}
+.loginBtn:active {
+  box-shadow: inset 0 0 0 32px rgba(0,0,0,0.1);
+}
+
+
+/* Facebook */
+.loginBtn--facebook {
+  background-color: #4C69BA;
+  background-image: linear-gradient(#4C69BA, #3B55A0);
+  /*font-family: "Helvetica neue", Helvetica Neue, Helvetica, Arial, sans-serif;*/
+  text-shadow: 0 -1px 0 #354C8C;
+}
+.loginBtn--facebook:before {
+  border-right: #364e92 1px solid;
+  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/14082/icon_facebook.png') 6px 6px no-repeat;
+}
+.loginBtn--facebook:hover,
+.loginBtn--facebook:focus {
+  background-color: #5B7BD5;
+  background-image: linear-gradient(#5B7BD5, #4864B1);
+}
+
+
+/* Google */
+.loginBtn--google {
+  /*font-family: "Roboto", Roboto, arial, sans-serif;*/
+  background: #DD4B39;
+}
+.loginBtn--google:before {
+  border-right: #BB3F30 1px solid;
+  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/14082/icon_google.png') 6px 6px no-repeat;
+}
+.loginBtn--google:hover,
+.loginBtn--google:focus {
+  background: #E74B37;
+}
+.hori{
+  display: flex;
+} 
+     .inputField {
+  position: relative; 
+  width: 100%;
+}
+
+.inputField input {
+  
+  padding-top: 18px;
+  border: 1.8px solid rgba(107, 107, 107, 0.4);
+  border-radius: 3px;
+  width: 90%;
+  color: black; 
+  margin: auto; 
+  text-align: center;
+}
+
+.inputField input:focus {
+  border: 1.8px solid #6b6b6b;
+  outline: none;
+}
+
+.inputField span {
+  pointer-events: none;
+  opacity: 0.5;
+  position: absolute;
+  padding-left: 20px;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  cursor: text;
+}
+
+.inputField input:focus+span,
+.inputField input:not(:placeholder-shown)+span {
+  top: 7px;
+  -webkit-transform: scale(0.7) translateY(-10%) translateX(-8.5px);
+  transform: scale(0.7) translateY(-10%) translateX(-8.5px);
+}
+
+.inputField input,
+.inputField span {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  -webkit-transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+  transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+     a{
+        text-align: center; 
+        margin: auto;
+        margin-left: 10px;;
+        color: white; 
+        text-decoration: none;
+        font-size: large; 
+        padding:auto;
+     }
+     #navt{
+        padding:30px 30px 30px 30px;
+     } 
+     #sub{
+        background-color:#cfd0d0; 
+        border: #1377c9; 
+        width: 92%; 
+        height: 50px; 
+        color: white; 
+        border-radius: 5px;
+     } 
+     .line{
+        content: " ";
+    height: 2px;
+    background-color: #d8d8d8;
+    width: 46%;
+    margin: 12px 0;
+     } 
+     #hoz {
+   width: 92%; 
+   text-align: center; 
+   border-bottom: 2px solid gray; 
+   line-height: 0.1em;
+   margin: 10px 0 20px; 
+} 
+#logo{
+  width:10%;
+  height: 45px;
+}
+h2 span { 
+    background:#fff; 
+    padding:0 10px; 
+}  
+hr{
+    width:45%;
+}
+p{
+    text-align: center;
+    color:black ;
+} 
+h4{
+    text-align: center; 
+} 
+#s{
+    color: red;
+}
+    </style>
+</head>
+<body > 
+    <h5>ONE ACCOUNT.THREE BRANDS</h5> 
+    <div class="logo">
+    <img src="https://my.davidsbridal.com/db.svg"  class="logos"/>
+    <img src="https://my.davidsbridal.com/diamond.svg" class="logos"/>
+    <img src="https://my.davidsbridal.com/pearl.svg" class="logos"/> </div> <br><br><br>
+    <div class="main">
+    <h3>SIGN UP</h3> 
+    <button class="loginBtn loginBtn--facebook" id="fb">
+      Signup with Facebook
+    </button>
+    
+    <button class="loginBtn loginBtn--google" id="customBtn">
+      Signup with Google
+    </button>
+    <div class="hori"><hr>or<hr></div><br>
+    <form id="submit">
+        <div class="inputField">
+            <input type="email" placeholder=" " id="email"  required/>
+            <span>* Email</span>
+          </div> <br>  
+          <div class="inputField">
+            <input type="text" placeholder=" " id="fname" required/>
+            <span>* First Name</span>
+          </div>   <br>
+          <div class="inputField">
+            <input type="text" placeholder=" " id="lname" required/>
+            <span>* Last Name</span>
+          </div> <br> 
+          <div class="inputField">
+            <input type="tel" placeholder=" " id="mob" required/>
+            <span>* Phone Number for Store Lookup</span>
+          </div>  <br>  
+          <div class="inputField">
+           <input type="date" id="birthday" name="birthday" required>
+           <span>* birthday</span>
+            </div>
+          <p>Let us know your birthday so we can send a reward to celebrate your day! </p> <br>    
+          <div class="inputField">
+            <input type="password" placeholder=" " id="pass" required/>
+            <span>* Password</span>
+          </div> <br>  
+          <div class="inputField">
+          <input type="password" placeholder=" " id="pass1" required/>
+          <span>* confirm Password</span>
+        </div> <br>   
+        <p>By continuing you agree to enroll in and to the<span><u>Terms</u></span>of our Welcome Rewards Program. For information on our privacy practices, please visit our <u>Privacy Policy</u>California residents: view our Notice of Financial Incentive </p>
+         <br>
+          <input type="checkbox" id="checkbox"/><label>I Agree</label>
+          <div class="inputField">                                                                                                                   
+          <input type="submit" id="sub"value="Create an Account"/>
+          </div><br><br> 
+           </form> 
+
+
+</div> 
+
+    </div> 
+    <script>
+        var googleUser = {};
+        var startApp = function() {
+          gapi.load('auth2', function(){
+            // Retrieve the singleton for the GoogleAuth library and set up the client.
+            auth2 = gapi.auth2.init({
+              client_id: '993273098507-i2t8bqglpkl5qu90p4tmv5raunf7mn5c.apps.googleusercontent.com',
+              cookiepolicy: 'single_host_origin',
+              // Request scopes in addition to 'profile' and 'email'
+              //scope: 'additional_scope'
+            });
+            attachSignin(document.getElementById('customBtn'));
+          });
+        };
+      
+        function attachSignin(element) {
+          console.log(element.id);
+          auth2.attachClickHandler(element, {},
+              function(googleUser) {
+                document.getElementById('name').innerText = "Signed in: " +
+                    googleUser.getBasicProfile().getName();
+              }, function(error) {
+                alert(JSON.stringify(error, undefined, 2));
+              });
+        } 
+        let btn=document.getElementById("customBtn") 
+        btn.addEventListener("click",()=>{
+            startApp()
+        }) 
+        let fb=document.getElementById("fb") 
+        fb.addEventListener("click",()=>{
+            window.location.href = "logingoogle.html"
+        })
+        </script> 
+       <script> 
+       // --- do not touch  ↓↓↓↓↓↓↓↓↓↓↓↓ ----------
+const baseServerURL = `http://localhost:${
+  import.meta.env.REACT_APP_JSON_SERVER_PORT
+}`;
+// --- do not touch  ↑↑↑↑↑↑↑↑↑↑↑↑ ----------
+
+// ***** Constants / Variables ***** //
+const userRegisterURL = `${baseServerURL}/register`;
+const userLoginURL = `${baseServerURL}/login`;
+        var submit = document.getElementById("sub"); 
+        var form = document.getElementById("submit");
+        
+        
+        form.addEventListener("submit",(e)=>{   
+          e.preventDefault() 
+          var e = JSON.parse(localStorage.getItem("email"))||[]
+          var arr= JSON.parse(localStorage.getItem("user"))||[]  
+          var email =document.getElementById("email").value;
+        var fname = document.getElementById("fname").value; 
+        var lname = document.getElementById("lname").value;
+        var mobile = document.getElementById("mob").value; 
+        var dob = document.getElementById("birthday").value;
+        var pass = document.getElementById("pass").value; 
+        var con=document.getElementById("pass1").value; 
+        var checkbox=document.getElementById("checkbox").value;
+         var e = JSON.parse(localStorage.getItem("email"))||[]  
+         
+     if (
+    email === "" 
+  
+  ) {
+    alert("Please enter a valid email ");
+    return;
+  } 
+  else if(mobile.length>10 || mobile.length<10){
+          alert("mobile no should be of 10 Digits")
+         }  
+  else if (
+    
+    pass === "" ||
+    con === "" 
+  ) {
+    alert("Please enter a valid password");
+    return;
+  }
+  
+  else if (pass != con) {
+    e.preventDefault();
+    
+      alert("The passwords you have entered do not match. Please try again.")
+
+      alert("Password must contain at least 1 Uppercase , 1 lowercase , 1 number and 1 special Character.")
+    return;
+  } else if (pass.length < 8 && pass.length != 0) {
+    e.preventDefault();
+    errorMessage(
+      alert("Password must be a minimum of 8 characters and cannot exceed 70 characters")
+    );
+    errorMessage(
+      alert("Password must contain at least 1 Uppercase , 1 lowercase , 1 number and 1 special Character.")
+    );
+    return;
+  }else if(checkbox==false){
+    alert("please select checkbox");
+    return;
+  }   
+         else{ 
+          async function RegisterUser(){
+          try{ 
+          const obj = {
+            email:email, 
+            fname:fname,
+            lname:lname,
+            mobile:mobile,
+            dob:dob,
+            pass:pass,
+          }  
+
+      let register_request = await fetch(`${userRegisterURL}`,{
+        method : 'POST',
+        headers : {
+          "Content-Type" : 'application/json'
+        },
+        body : JSON.stringify(obj)
+      }) 
+      
+      console.log(register_request);
+      
+  } catch (error) {
+    console.log(error);
+  }
+}
+  
+        })
+        
+        </script>
+
+</body> 
+
+</html>

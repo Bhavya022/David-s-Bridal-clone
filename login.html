@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="appleid-signin-client-id" content="[CLIENT_ID]">
+        <meta name="appleid-signin-scope" content="[SCOPES]">
+        <meta name="appleid-signin-redirect-uri" content="[REDIRECT_URI]">
+        <meta name="appleid-signin-state" content="[STATE]">
+    <title>Bridal Login Page</title>  
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> 
+    
+    <style>
+        body{
+            background-color: #f7f1eb;
+        } 
+        h5{
+            font-size: 11px;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 1.65px;
+    line-height: 15px;
+    margin: 0px 0px 16px;
+        } 
+        .logo{
+            display: flex; 
+            border: 1px solid red; 
+            text-align: center; 
+            justify-content: center ;
+    margin: 16px -12px 20px
+        } 
+        .logos{
+            display: flex;
+    padding: 0px 12px;
+        }  
+        .main{
+            
+    flex-wrap: wrap; 
+    width:100%;
+    justify-content: center; 
+    border:1px solid red; 
+    flex: 0 0 75%;
+    max-width: 75%; 
+    margin:auto; 
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px; 
+    background-color: white;
+        } 
+        h3{
+            text-align: center;
+        }  
+        .social{
+            margin: 0px 0px 15px !important;
+    display: flex !important;
+
+        }
+        
+        .loginBtn {
+  box-sizing: border-box;
+  position: relative;
+  /* width: 13em;  - apply for fixed size */
+  margin:auto;
+  padding: 0 15px 0 30px;
+  border: none;
+  text-align: center;
+  line-height: 34px;
+  white-space: nowrap;
+  border-radius: 0.2em;
+  font-size: 16px;
+  color: #FFF; 
+  
+}
+.loginBtn:before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 34px;
+  height: 100%;
+}
+.loginBtn:focus {
+  outline: none;
+}
+.loginBtn:active {
+  box-shadow: inset 0 0 0 32px rgba(0,0,0,0.1);
+}
+
+.loginBtn {
+  box-sizing: border-box;
+  position: relative;
+  /* width: 13em;  - apply for fixed size */
+  margin: 0.2em;
+  padding: 0 15px 0 46px;
+  border: none;
+  text-align: left;
+  line-height: 34px;
+  white-space: nowrap;
+  border-radius: 0.2em;
+  font-size: 16px;
+  color: #FFF;
+}
+.loginBtn:before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 34px;
+  height: 100%;
+}
+.loginBtn:focus {
+  outline: none;
+}
+.loginBtn:active {
+  box-shadow: inset 0 0 0 32px rgba(0,0,0,0.1);
+}
+
+
+/* Facebook */
+.loginBtn--facebook {
+  background-color: #4C69BA;
+  background-image: linear-gradient(#4C69BA, #3B55A0);
+  /*font-family: "Helvetica neue", Helvetica Neue, Helvetica, Arial, sans-serif;*/
+  text-shadow: 0 -1px 0 #354C8C;
+}
+.loginBtn--facebook:before {
+  border-right: #364e92 1px solid;
+  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/14082/icon_facebook.png') 6px 6px no-repeat;
+}
+.loginBtn--facebook:hover,
+.loginBtn--facebook:focus {
+  background-color: #5B7BD5;
+  background-image: linear-gradient(#5B7BD5, #4864B1);
+}
+
+
+/* Google */
+.loginBtn--google {
+  /*font-family: "Roboto", Roboto, arial, sans-serif;*/
+  background: #DD4B39;
+}
+.loginBtn--google:before {
+  border-right: #BB3F30 1px solid;
+  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/14082/icon_google.png') 6px 6px no-repeat;
+}
+.loginBtn--google:hover,
+.loginBtn--google:focus {
+  background: #E74B37;
+}
+.hori{
+  display: flex;
+} 
+/*email*/ 
+
+.inputField {
+  position: relative; 
+  width: 60%; 
+  margin: auto;
+}
+
+.inputField input {
+  padding: 8px 20px;
+  padding-top: 18px;
+  border: 1.8px solid rgba(107, 107, 107, 0.4);
+  border-radius: 3px;
+  width: 90%;
+  color: black;
+}
+
+.inputField input:focus {
+  border: 1.8px solid #6b6b6b;
+  outline: none;
+}
+
+.inputField span {
+  pointer-events: none;
+  opacity: 0.5;
+  position: absolute;
+  padding-left: 20px;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  cursor: text;
+}
+
+.inputField input:focus+span,
+.inputField input:not(:placeholder-shown)+span {
+  top: 7px;
+  -webkit-transform: scale(0.7) translateY(-10%) translateX(-8.5px);
+  transform: scale(0.7) translateY(-10%) translateX(-8.5px);
+}
+
+.inputField input,
+.inputField span {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  -webkit-transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+  transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+    </style> 
+    <!-- Compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+</head>
+<body>
+    <h5>ONE ACCOUNT.THREE BRANDS</h5> 
+    <div class="logo">
+    <img src="https://my.davidsbridal.com/db.svg"  class="logos"/>
+    <img src="https://my.davidsbridal.com/diamond.svg" class="logos"/>
+    <img src="https://my.davidsbridal.com/pearl.svg" class="logos"/> </div> 
+    <div class="main">
+    <h3>log in</h3> 
+    <button class="loginBtn loginBtn--facebook">
+      Login with Facebook
+    </button>
+    
+    <button class="loginBtn loginBtn--google">
+      Login with Google
+    </button>
+    <div class="hori"><hr style="width:45%;
+    ">or<hr style="width:45%"></div>
+    <form id="submit">
+      <div class="inputField">
+          <input type="email" placeholder=" " id="email"  required/>
+          <span>* Email</span>
+        </div> <br>  
+      </form>
+    </div>
+</body>
+</html>
