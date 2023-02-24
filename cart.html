@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="cart.css" />
+  </head>
+  <body>
+    <main id="mainPage">
+      <div class="leftSide">
+        <p style="font-size: 37px">
+          shopping bag (<span id="totalItem"></span>)
+        </p>
+
+        <div class="itemNames">
+          <p>item</p>
+          <p>quantity</p>
+          <p>price</p>
+        </div>
+        <hr
+          style="
+            margin-top: 2vh;
+            height: apx;
+            background-color: rgba(165, 161, 161, 0.582);
+            margin-bottom: 1vh;
+          "
+        />
+        <div id="mainCard"></div>
+       
+    </div>
+      </div>
+
+      <div class="rightSide">
+<div class="topSide">
+    <div><img src="https://us.123rf.com/450wm/taawon/taawon1912/taawon191200549/141277220-20-off-sale-20-percent-discount-special-price-offer-marketing-promotional-poster-design-vector.jpg?ver=6" alt="ErrorLOading" ></div>
+    <form class="applyCouponForm"><input type="text" name="" id="enterCoupon" placeholder="Enter Coupon Code">
+    <input type="submit" value="Apply Coupon"></form>
+</div>
+<div class="midArea">
+  <div style="width: 100%; background-color: pink; height: 10vh; display: flex; align-items: center; padding-left: 50px;">
+<h2>Order Summary</h2>
+  </div>
+  <div style="width: 100%; padding-left: 50px;">
+  <p>SUBTOTAL (<span id="totalItem"></span> ITEMS):__________<span id="totalPrice"></span></p>
+  <p>SHIPPING (CHARGE):___________<span id="shippingCharge"></span></p>
+  <p>GST TAX (CHARGE):____________<span id="gst"></span></p>
+  <h4>TOTAL PRICE:________________<span id="subTotal"></span></h4>
+  </div>
+
+
+</div>
+
+      </div>
+    </main>
+    <script src="./cart.js"></script>
+  </body>
+</html>

@@ -1,0 +1,231 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+/*------ HEADER1 -------*/
+
+#header1{
+display:flex ;
+justify-content: space-between;
+/* border:2px solid red; */
+height:40px;
+background-color: #132122;
+}
+
+
+.primary{
+    display: flex;
+    /* border:2px solid blue; */
+    justify-content:space-between;
+    width:30%;
+   
+}
+.logo{
+    width:25%;
+    /* border: 2px solid blue; */
+    background-color: white;
+}
+
+.logo>img{
+    border:none;
+    
+}
+
+
+
+.primary img{
+    /* border:2px solid black; */
+    width:100%;
+    height:100%;
+   }
+.secondary{
+    display: flex;
+    justify-content: space-evenly;
+    width:40%;
+
+}
+.secondary h4{
+    color:white;
+    font-size:20px;
+}
+.details>button{
+    /* text-align: center; */
+    /* border: 2px solid orange; */
+    padding:9px;
+    background-color:#132122 ;
+    color:white;
+}
+.secondary img{
+    width: 100%;
+    height: 100%;
+}
+
+
+
+/*---------- NAVBAR ------------ */
+#navbar {
+    overflow: hidden;
+    background-color:white;
+  }
+  
+  #navbar a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  #navbar a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  /* #navbar a.active {
+    background-color: #04AA6D;
+    color: white;
+  } */
+  
+  .content {
+    padding: 16px;
+  }
+  
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  
+  .sticky + .content {
+    padding-top: 60px;
+  }
+
+  .search input[type=text] {
+    float: right;
+    padding: 6px;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 15px;
+  }
+
+  #header2 {
+    display: flex;
+    width:100%;
+    height:60px;
+    justify-content: space-between;
+
+  }
+
+  /* #header2>div{  
+    border: 2px solid black;
+  } */
+  .logo1>img{
+    height:70%;
+  }
+
+  
+  .utilities>img{
+   height:70% ;
+    padding-right: 20px;
+  }
+
+  .wedding{
+    display: flex;
+    width:100%;;
+  }
+  .wedding>div{
+    /* border:2px solid orange; */
+    height:500px
+  }
+  .wedding>div:nth-child(1){
+    width:3000px;
+     /* border:2px solid orange;  */
+
+  }
+
+  .wedding>div:nth-child(1)>img{
+    height:100%;
+    width:100%;
+
+  }
+  /* .beautiful>div>button{
+    display:block;
+  } */
+ .beautiful>div>img{
+    width:100%;
+    height: 350px;
+    
+ }
+  
+   
+  .beautiful>div{
+    background-color: black;
+    /* border: 2px solid blue; */
+    height:100%;
+  }
+  .beautiful button{
+     margin: 30px 0 0 90px;
+     background-color: #132122;
+     color: white;
+     border:2px solid white;
+  }
+
+ 
+  /*---- EXCLUSIVE -----*/
+.brands{
+    /* border: 2px solid seagreen; */
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    width:80%;
+    margin-left: 160px;
+    
+}
+
+  .exclusive>h1{
+    text-align: center;
+    padding:50px;
+    font-size: 50px;
+  }
+
+  .btn{
+    font-size: 40px;
+    padding: 10px;
+    border:2px solid black;
+    margin:50px;
+    transform: translateX(550px); 
+  }
+
+  .savings>h1{
+    text-align: center;
+    padding:50px;
+    font-size: 50px;
+  }
+  
+  .love{
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+    /* border: 2px solid rebeccapurple; */
+    height: 500px;
+  }
+  .love>div{
+    width:70%;
+   
+    /* border: 2px solid lawngreen; */
+    margin-left: 50px;
+  }
+  .love>div>img{
+    width:100%;
+    height:80%;
+  }
+
+  .love>div>p{
+    text-align: center;
+    margin-top: 10px;
+  }
+  .wink>h3{
+    color:#925862;
+    font-family: ABScript;
+  }
