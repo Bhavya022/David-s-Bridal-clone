@@ -170,10 +170,11 @@ if(coupon.value=="bridal20"){
   totalPriceid.innerText=(totalPrice -(Math.floor((totalPrice*20)/100)));
   let charge=document.getElementById("shippingCharge")
   charge.innerText=totalPrice%10*10;
-let gst=document.getElementById("gst");
-gst.innerText=(Math.floor((totalPrice*2)/100))
-let subTotal=document.getElementById("subTotal");
-subTotal.innerText=totalPrice%10*10+(Math.floor((totalPrice*2)/100))+totalPrice
+  let gst=document.getElementById("gst");
+  gst.innerText=(Math.floor((totalPrice*2)/100))
+  let subTotal=document.getElementById("subTotal");
+  subTotal.innerText=totalPrice%10*10+(Math.floor((totalPrice*2)/100))+totalPrice
+  localStorage.setItem("totalAmmount",(subTotal.innerText));
 }else{
   console.log("No")
 }
