@@ -174,6 +174,7 @@ let gst=document.getElementById("gst");
 gst.innerText=(Math.floor((totalPrice*2)/100))
 let subTotal=document.getElementById("subTotal");
 subTotal.innerText=totalPrice%10*10+(Math.floor((totalPrice*2)/100))+totalPrice
+localStorage.setItem("totalAmmount",(subTotal.innerText));
 }else{
   console.log("No")
 }
