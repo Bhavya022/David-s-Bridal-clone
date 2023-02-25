@@ -157,21 +157,6 @@ span.price {
               <i class="fa fa-cc-discover" style="color:orange;"></i>
             </div>
             <label for="cname">Name on Card</label>
-
-            <input type="text" id="cname" name="cardname" placeholder="Bhavya Khatri">
-            <label for="ccnum">Credit card number/Debit card number</label>
-            <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
-            <label for="expmonth">Exp Month</label>
-            <input type="text" id="expmonth" name="expmonth" placeholder="September">
-            <div class="row">
-              <div class="col-50">
-                <label for="expyear">Exp Year</label>
-                <input type="text" id="expyear" name="expyear" placeholder="2018">
-              </div>
-              <div class="col-50">
-                <label for="cvv">CVV</label>
-                <input type="text" id="cvv" name="cvv" placeholder="352">
-
             <input type="text" id="cname" name="cardname" placeholder="Bhavya Khatri" required>
             <label for="ccnum">Credit card number/Debit card number</label>
             <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444" required>
@@ -185,7 +170,6 @@ span.price {
               <div class="col-50">
                 <label for="cvv">CVV</label>
                 <input type="text" id="cvv" name="cvv" placeholder="352" required>
-
               </div>
             </div>
           </div>
@@ -221,10 +205,6 @@ var adr=document.getElementById("adr").value;
 var city=document.getElementById("city").value; 
 var state=document.getElementById("state").value; 
 var zip=document.getElementById("zip").value; 
-
-var zip=document.getElementById("fname").value; 
-
-
 var ccnum=document.getElementById("ccnum").value;
 var cvv = document.getElementById("cvv").value; 
 
@@ -242,18 +222,12 @@ else if(cvv.length>3 || cvv.length<3){
   alert("cvv should be of 3 digit")
 }
 else{
-
    
  alert("Order Placed Successfully") 
  window.location.href="./index.html"
 
 } 
 })
-
-  
-}
-
-
 </script>
 </html>
 
