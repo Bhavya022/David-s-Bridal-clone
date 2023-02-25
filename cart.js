@@ -1,6 +1,6 @@
-// let arr = [14, 9, 10, 12, 11, 13,15];
+let arr = [14, 9, 10, 12, 11, 13,15];
 
-// localStorage.setItem("cart", JSON.stringify(arr));
+localStorage.setItem("cart", JSON.stringify(arr));
 let lsData = JSON.parse(localStorage.getItem("cart")) || [];
 let leftSide = document.querySelector("#mainCard");
 let totalItem = document.getElementById("totalItem");
