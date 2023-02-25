@@ -139,7 +139,8 @@ text-align: center;
     width: 80%;
     /* height: 30vh; */
     /* border: 1px solid black; */
-    height: 40vh;
-    background-color: rgba(156, 215, 238, 0.137);
+    /* height: 40vh; */
+    background-color: rgb(209, 236, 250);
     box-shadow: 1px 1px 10px black;
+    z-index: 10;
   }
