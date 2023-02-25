@@ -6,6 +6,8 @@ let leftSide = document.querySelector("#mainCard");
 let totalItem = document.getElementById("totalItem");
 let totalPrice = 0;
 let totalPriceid=document.getElementById("totalPrice");
+let checkoutButton=document.querySelector(".checkoutButton");
+
 //fetching data
 let url = "https://63f43aabfe3b595e2eef9ab6.mockapi.io/products";
 let finalTotal=0;
@@ -116,11 +118,11 @@ finalTotal=totalPrice%10*10+(Math.floor((totalPrice*2)/100))+totalPrice;
     });
 
   }
-
+localStorage.setItem("totalAmmount",(subTotal.innerText))
 function calculatingFinal(data){
-  let lastPrice=data/2
-  subTotal.innerText=lastPrice;
-  localStorage.setItem("totalAmmount",(lastPrice));
+  subTotal.innerText=data/2;
+
+  localStorage.setItem("totalAmmount",(data/2));
   
 }
 
@@ -176,4 +178,12 @@ subTotal.innerText=totalPrice%10*10+(Math.floor((totalPrice*2)/100))+totalPrice
   console.log("No")
 }
 
+})
+
+
+
+//eventlistner
+
+checkoutButton.addEventListener("click",()=>{
+  window.location.href="./checkout.html"
 })
