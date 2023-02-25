@@ -187,7 +187,7 @@ async function postProduct(){
 form.addEventListener("submit",(e)=>{
     e.preventDefault();
 
-    postProduct(title,brand,image,price,color,fabric);
+    postProduct();
 })
 }
 

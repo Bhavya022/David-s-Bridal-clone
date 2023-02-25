@@ -1,399 +1,352 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="appleid-signin-client-id" content="[CLIENT_ID]">
-  <meta name="appleid-signin-scope" content="[SCOPES]">
-  <meta name="appleid-signin-redirect-uri" content="[REDIRECT_URI]">
-  <meta name="appleid-signin-state" content="[STATE]">
-  <title></title>
-  <style>
-    body {
-      background-color: #f7f1eb;
-    }
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="appleid-signin-client-id" content="[CLIENT_ID]">
+        <meta name="appleid-signin-scope" content="[SCOPES]">
+        <meta name="appleid-signin-redirect-uri" content="[REDIRECT_URI]">
+        <meta name="appleid-signin-state" content="[STATE]">
+    <title></title>
+    <style>
+ body{
+            background-color: #f7f1eb;
+        } 
+        h5{
+            font-size: 11px;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 1.65px;
+    line-height: 15px;
+    margin: 0px 0px 16px;
+        } 
+        .logo{
+            display: flex; 
+            width:30%;
+            text-align: center; 
+            justify-content: center ;
+    margin: auto;
+        
+        } 
+        .logos{
+            display: flex;
+    padding: 0px 12px; 
+       width: 70%;
+        }  
+        .main{
+            
+    flex-wrap: wrap; 
+    width:30%;
+    justify-content: center; 
+    flex: 0 0 75%;
+    max-width: 75%; 
+    margin:auto; 
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px; 
+    background-color: white; 
+    border-radius: 5px;
+        } 
+        h3{
+            text-align: center;
+        }  
+        .social{
+            margin: 0px 0px 15px !important;
+    display: flex !important;
 
-    h5 {
-      font-size: 11px;
-      text-transform: uppercase;
-      text-align: center;
-      letter-spacing: 1.65px;
-      line-height: 15px;
-      margin: 0px 0px 16px;
-    }
+        }
+        
+        .loginBtn {
+  box-sizing: border-box;
+  position: relative;
+  /* width: 13em;  - apply for fixed size */
+  margin:auto;
+  padding: 0 15px 0 30px;
+  border: none;
+  text-align: center;
+  line-height: 34px;
+  white-space: nowrap;
+  border-radius: 0.2em;
+  font-size: 16px;
+  color: #FFF; 
+  
+}
+.loginBtn:before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 34px;
+  height: 100%;
+}
+.loginBtn:focus {
+  outline: none;
+}
+.loginBtn:active {
+  box-shadow: inset 0 0 0 32px rgba(0,0,0,0.1);
+}
 
-    .logo {
-      display: flex;
-      width: 30%;
-      text-align: center;
-      justify-content: center;
-      margin: auto;
-
-    }
-
-    .logos {
-      display: flex;
-      padding: 0px 12px;
-      width: 70%;
-    }
-
-    .main {
-
-      flex-wrap: wrap;
-      width: 30%;
-      justify-content: center;
-      flex: 0 0 75%;
-      max-width: 75%;
-      margin: auto;
-      box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-      background-color: white;
-      border-radius: 5px;
-    }
-
-    h3 {
-      text-align: center;
-    }
-
-    .social {
-      margin: 0px 0px 15px !important;
-      display: flex !important;
-
-    }
-
-    .loginBtn {
-      box-sizing: border-box;
-      position: relative;
-      /* width: 13em;  - apply for fixed size */
-      margin: auto;
-      padding: 0 15px 0 30px;
-      border: none;
-      text-align: center;
-      line-height: 34px;
-      white-space: nowrap;
-      border-radius: 0.2em;
-      font-size: 16px;
-      color: #FFF;
-
-    }
-
-    .loginBtn:before {
-      content: "";
-      box-sizing: border-box;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 34px;
-      height: 100%;
-    }
-
-    .loginBtn:focus {
-      outline: none;
-    }
-
-    .loginBtn:active {
-      box-shadow: inset 0 0 0 32px rgba(0, 0, 0, 0.1);
-    }
-
-    .loginBtn {
-      box-sizing: border-box;
-      position: relative;
-      /* width: 13em;  - apply for fixed size */
-      margin: 0.2em;
-      padding: 0 15px 0 46px;
-      border: none;
-      text-align: left;
-      line-height: 34px;
-      white-space: nowrap;
-      border-radius: 0.2em;
-      font-size: 16px;
-      color: #FFF;
-    }
-
-    .loginBtn:before {
-      content: "";
-      box-sizing: border-box;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 34px;
-      height: 100%;
-    }
-
-    .loginBtn:focus {
-      outline: none;
-    }
-
-    .loginBtn:active {
-      box-shadow: inset 0 0 0 32px rgba(0, 0, 0, 0.1);
-    }
+.loginBtn {
+  box-sizing: border-box;
+  position: relative;
+  /* width: 13em;  - apply for fixed size */
+  margin: 0.2em;
+  padding: 0 15px 0 46px;
+  border: none;
+  text-align: left;
+  line-height: 34px;
+  white-space: nowrap;
+  border-radius: 0.2em;
+  font-size: 16px;
+  color: #FFF;
+}
+.loginBtn:before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 34px;
+  height: 100%;
+}
+.loginBtn:focus {
+  outline: none;
+}
+.loginBtn:active {
+  box-shadow: inset 0 0 0 32px rgba(0,0,0,0.1);
+}
 
 
-    /* Facebook */
-    .loginBtn--facebook {
-      background-color: #4C69BA;
-      background-image: linear-gradient(#4C69BA, #3B55A0);
-      /*font-family: "Helvetica neue", Helvetica Neue, Helvetica, Arial, sans-serif;*/
-      text-shadow: 0 -1px 0 #354C8C;
-    }
-
-    .loginBtn--facebook:before {
-      border-right: #364e92 1px solid;
-      background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/14082/icon_facebook.png') 6px 6px no-repeat;
-    }
-
-    .loginBtn--facebook:hover,
-    .loginBtn--facebook:focus {
-      background-color: #5B7BD5;
-      background-image: linear-gradient(#5B7BD5, #4864B1);
-    }
+/* Facebook */
+.loginBtn--facebook {
+  background-color: #4C69BA;
+  background-image: linear-gradient(#4C69BA, #3B55A0);
+  /*font-family: "Helvetica neue", Helvetica Neue, Helvetica, Arial, sans-serif;*/
+  text-shadow: 0 -1px 0 #354C8C;
+}
+.loginBtn--facebook:before {
+  border-right: #364e92 1px solid;
+  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/14082/icon_facebook.png') 6px 6px no-repeat;
+}
+.loginBtn--facebook:hover,
+.loginBtn--facebook:focus {
+  background-color: #5B7BD5;
+  background-image: linear-gradient(#5B7BD5, #4864B1);
+}
 
 
-    /* Google */
-    .loginBtn--google {
-      /*font-family: "Roboto", Roboto, arial, sans-serif;*/
-      background: #DD4B39;
-    }
+/* Google */
+.loginBtn--google {
+  /*font-family: "Roboto", Roboto, arial, sans-serif;*/
+  background: #DD4B39;
+}
+.loginBtn--google:before {
+  border-right: #BB3F30 1px solid;
+  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/14082/icon_google.png') 6px 6px no-repeat;
+}
+.loginBtn--google:hover,
+.loginBtn--google:focus {
+  background: #E74B37;
+}
+.hori{
+  display: flex;
+} 
+     .inputField {
+  position: relative; 
+  width: 100%; 
+  display: flex; 
+  justify-content: center;
+}
 
-    .loginBtn--google:before {
-      border-right: #BB3F30 1px solid;
-      background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/14082/icon_google.png') 6px 6px no-repeat;
-    }
+.inputField input {
+  
+  padding-top: 18px;
+  border: 1.8px solid rgba(107, 107, 107, 0.4);
+  border-radius: 3px;
+  width: 90%;
+  color: black; 
+  margin: auto; 
+  text-align: center;
+}
 
-    .loginBtn--google:hover,
-    .loginBtn--google:focus {
-      background: #E74B37;
-    }
+.inputField input:focus {
+  border: 1.8px solid #6b6b6b;
+  outline: none;
+}
 
-    .hori {
-      display: flex;
-    }
+.inputField span {
+  pointer-events: none;
+  opacity: 0.5;
+  position: absolute;
+  padding-left: 20px;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  cursor: text;
+}
 
-    .inputField {
-      position: relative;
-      width: 100%;
-      display: flex;
-      justify-content: center;
-    }
+.inputField input:focus+span,
+.inputField input:not(:placeholder-shown)+span {
+  top: 7px;
+  -webkit-transform: scale(0.7) translateY(-10%) translateX(-8.5px);
+  transform: scale(0.7) translateY(-10%) translateX(-8.5px);
+}
 
-    .inputField input {
-
-      padding-top: 18px;
-      border: 1.8px solid rgba(107, 107, 107, 0.4);
-      border-radius: 3px;
-      width: 90%;
-      color: black;
-      margin: auto;
-      text-align: center;
-    }
-
-    .inputField input:focus {
-      border: 1.8px solid #6b6b6b;
-      outline: none;
-    }
-
-    .inputField span {
-      pointer-events: none;
-      opacity: 0.5;
-      position: absolute;
-      padding-left: 20px;
-      left: 0;
-      top: 50%;
-      -webkit-transform: translateY(-50%);
-      transform: translateY(-50%);
-      cursor: text;
-    }
-
-    .inputField input:focus+span,
-    .inputField input:not(:placeholder-shown)+span {
-      top: 7px;
-      -webkit-transform: scale(0.7) translateY(-10%) translateX(-8.5px);
-      transform: scale(0.7) translateY(-10%) translateX(-8.5px);
-    }
-
-    .inputField input,
-    .inputField span {
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
-      user-select: none;
-      -webkit-transition: all 0.2s;
-      transition: all 0.2s;
-      -webkit-transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
-      transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
-    }
-
-    a {
-      text-align: center;
-      margin: auto;
-      margin-left: 10px;
-      ;
-      color: white;
-      text-decoration: none;
-      font-size: large;
-      padding: auto;
-    }
-
-    #navt {
-      padding: 30px 30px 30px 30px;
-    }
-
-    #sub {
-      background-color: #cfd0d0;
-      border: #1377c9;
-      width: 92%;
-      height: 50px;
-      color: white;
-      border-radius: 5px;
-    }
-
-    .line {
-      content: " ";
-      height: 2px;
-      background-color: #d8d8d8;
-      width: 46%;
-      margin: 12px 0;
-    }
-
-    #hoz {
-      width: 92%;
-      text-align: center;
-      border-bottom: 2px solid gray;
-      line-height: 0.1em;
-      margin: 10px 0 20px;
-    }
-
-    #logo {
-      width: 10%;
-      height: 45px;
-    }
-
-    h2 span {
-      background: #fff;
-      padding: 0 10px;
-    }
-
-    hr {
-      width: 45%;
-    }
-
-    p {
-      text-align: center;
-      color: black;
-    }
-
-    h4 {
-      text-align: center;
-    }
-
-    #s {
-      color: red;
-    }
-  </style>
+.inputField input,
+.inputField span {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  -webkit-transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+  transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+     a{
+        text-align: center; 
+        margin: auto;
+        margin-left: 10px;;
+        color: white; 
+        text-decoration: none;
+        font-size: large; 
+        padding:auto;
+     }
+     #navt{
+        padding:30px 30px 30px 30px;
+     } 
+     #sub{
+        background-color:#cfd0d0; 
+        border: #1377c9; 
+        width: 92%; 
+        height: 50px; 
+        color: white; 
+        border-radius: 5px;
+     } 
+     .line{
+        content: " ";
+    height: 2px;
+    background-color: #d8d8d8;
+    width: 46%;
+    margin: 12px 0;
+     } 
+     #hoz {
+   width: 92%; 
+   text-align: center; 
+   border-bottom: 2px solid gray; 
+   line-height: 0.1em;
+   margin: 10px 0 20px; 
+} 
+#logo{
+  width:10%;
+  height: 45px;
+}
+h2 span { 
+    background:#fff; 
+    padding:0 10px; 
+}  
+hr{
+    width:45%;
+}
+p{
+    text-align: center;
+    color:black ;
+} 
+h4{
+    text-align: center; 
+} 
+#s{
+    color: red;
+}
+    </style>
 </head>
-
-<body>
-  <h5>ONE ACCOUNT.THREE BRANDS</h5>
-  <div class="logo">
-    <img src="https://my.davidsbridal.com/db.svg" class="logos" />
-    <img src="https://my.davidsbridal.com/diamond.svg" class="logos" />
-    <img src="https://my.davidsbridal.com/pearl.svg" class="logos" />
-  </div> <br><br><br>
-  <div class="main">
-    <h3>LOG IN</h3>
+<body > 
+    <h5>ONE ACCOUNT.THREE BRANDS</h5> 
+    <div class="logo">
+    <img src="https://my.davidsbridal.com/db.svg"  class="logos"/>
+    <img src="https://my.davidsbridal.com/diamond.svg" class="logos"/>
+    <img src="https://my.davidsbridal.com/pearl.svg" class="logos"/> </div> <br><br><br>
+    <div class="main">
+    <h3>LOG IN</h3> 
     <button class="loginBtn loginBtn--facebook">
       Login with Facebook
     </button>
-
+    
     <button class="loginBtn loginBtn--google">
       Login with Google
     </button>
-    <div class="hori">
-      <hr>or
-      <hr>
-    </div><br>
-    <form id="submit">
-      <div class="inputField">
-        <input type="email" placeholder=" " id="email" required />
+    <div class="hori"><hr>or<hr></div><br>
+   <form id="submit">
+    <div class="inputField">
+        <input type="email" placeholder=" " id="email"  required/>
         <span>* Email</span>
-      </div> <br>
-
+      </div> <br>  
+         
       <div class="inputField">
-        <input type="password" placeholder=" " id="pass" required />
+        <input type="password" placeholder=" " id="pass" required/>
         <span>* Password</span>
       </div>
-      <p>Email and password are case sensitive</p>
-      <div class="inputField">
-        <input type="submit" id="sub" value="LOG IN WITH EMAIL" />
+      <p>Email and password are case sensitive</p>      
+      <div class="inputField">                                                                                                                   
+      <input type="submit" id="sub"value="LOG IN WITH EMAIL"/>
       </div><br>
-      <P><span><u>forgot password?</u></span></P>
-      <p>
-      <h4>Don't have an account?<span id="s"><u>Signup</u></span></h4>
-      </p><br><br><br>
-    </form>
+      <P ><span><u>forgot password?</u></span></P> 
+      <p ><h4 >Don't have an account?<span id="s"><u>Signup</u></span></h4></p><br><br><br>
+       </form>
 
 
-  </div>
+</div> 
 
-  </div>
-  <script>
+    </div>
+    <script> 
+      
+      var submit = document.getElementById("sub"); 
+      var form = document.getElementById("submit");
+      
+      
+      form.addEventListener("submit",(e)=>{   
+        e.preventDefault() 
+ 
 
-    var submit = document.getElementById("sub");
-    var form = document.getElementById("submit");
-
-
-    form.addEventListener("submit", (e) => {
-      e.preventDefault()
- LoginUser()
-
-    })
-
-    async function LoginUser() {
-
-
-      var email = document.getElementById("email").value;
-  var pass = document.getElementById("pass").value;
-  // console.log(email);
-  // console.log(pass) 
-    
-        try { 
-          let res = await fetch(`https://main-server-qat8.onrender.com/users`)
-            
         
-          let data = await res.json();
-          // localStorage.setItem("localAccessToken", data.username);
-          // localStorage.setItem("userId", data.user.password) 
-          let flag = false;
-          for (let i of data) {
-            if (i.email == email && i.pass == pass) {
-              localStorage.setItem("userName",(i.fname))
-              flag=true;
-              break;
-            }
-          } 
-          console.log(email)
-          if(flag){ 
-            console.log(email)
-            if(email.includes("admin")){
-               alert("Admin Login SuccessFully")
-               window.location.href="./admin.html"
-             } 
-             else{
-              
-               alert("user successfully logged in."); 
+        var email =document.getElementById("email").value;
+      var pass = document.getElementById("pass").value; 
 
-                 window.location.href="./index.html"
-             }
-          }
-          else{
-            alert("user not found");
-          }
-        } catch (error) {
-          alert(error);
-        }
-      }
-  </script>
-</body>
+        
+         async function LoginUser(){
+    const login_details = {
+      username : email,
+      password : pass,
+    }
+
+    try { 
+    let res = await fetch(`https://main-server-qat8.onrender.com/users`, {
+      method: "POST",
+      headers: {
+        "Content-type": "application/json",
+      },
+      body: JSON.stringify(login_details),
+    });
+
+    let data = await res.json();
+    console.log("login ", data);
+    localStorage.setItem("localAccessToken", data.username);
+    localStorage.setItem("userId", data.user.password)
+    alert("user successfully logged in.");
+  } catch (error) {
+    alert("Username/Password is wrong", JSON.stringify(error));
+  }
+  }
+        
+  LoginUser()   
+   
+      } )
+      
+      
+      </script>
+</body> 
 
 </html>

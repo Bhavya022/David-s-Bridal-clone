@@ -184,7 +184,7 @@ span.price {
   </div>
   <div class="col-25">
     <div class="container">
-      <h4>Cart <span class="price" style="color:black"><i class="fa fa-shopping-cart"></i> <b>4</b></span></h4>
+      <h4>Cart <span class="price" style="color:black"><i class="fa fa-shopping-cart"></i> <b id="totalProduct"></b></span></h4>
       
       <hr>
       <p>Total <span class="price" style="color:black"><b id="total"></b></span></p>
@@ -194,6 +194,11 @@ span.price {
 
 </body> 
 <script>
+  let allProduct=document.getElementById("totalProduct");
+
+  let totalProduct=JSON.parse(localStorage.getItem("cart"))||[];
+  console.log(totalProduct.length);
+  allProduct.textContent=totalProduct.length;
   let totalAmt =localStorage.getItem("totalAmmount") ||[]  
   var total=document.getElementById("total");   
   total.textContent=totalAmt
