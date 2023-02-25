@@ -1,5 +1,8 @@
 // api here
+//url here
 
+const productApi='https://main-server-qat8.onrender.com/product';
+const usersApi='https://main-server-qat8.onrender.com/users';
 
 //getting id's from document here
 
@@ -16,14 +19,9 @@ let logout=document.getElementById("logout");
 
 let main=document.querySelector("#main");
 
-//url here
 
-const productApi='https://63f43aabfe3b595e2eef9ab6.mockapi.io/products';
-const usersApi='https://63f43aabfe3b595e2eef9ab6.mockapi.io/users';
 
 //api fetching
-
-
 
 
 //adEventListner here
@@ -114,7 +112,7 @@ function getCard(index,id,title,brand,price){
 }
 async function deletingFun(id) {
     try {
-      let delete_request = await fetch(`https://63f43aabfe3b595e2eef9ab6.mockapi.io/products/${id}`, {
+      let delete_request = await fetch(`${productApi}/${id}`, {
         method: "DELETE",
         headers: {
           'Content-type': 'application/json'
@@ -257,7 +255,7 @@ function getCardCus(index,id,name,email,mobile){
 }
 async function deletingFunCus(id) {
     try {
-      let delete_request = await fetch(`https://63f43aabfe3b595e2eef9ab6.mockapi.io/users/${id}`, {
+      let delete_request = await fetch(`${productApi}/${id}`, {
         method: "DELETE",
         headers: {
           'Content-type': 'application/json'
@@ -316,7 +314,6 @@ function updateProductFun(data){
 try {
     let response=await fetch(`${productApi}/${id}`);
     response=await response.json();
-    // console.log(response.id,response.brand,response.title,response.price,response.image,response.color,response.fabric)
     return editFun(response.id,response.brand,response.title,response.price,response.image,response.color,response.fabric);
 } catch (error) {  
     console.log(error);
@@ -406,8 +403,7 @@ async function patchProduct(){
             body:JSON.stringify(UpdateProduct)
         })
         if(postProductval.ok){
-            alert("Product Updated")
-            
+            alert("Product Updated") 
         }
     console.log(productId.id,product);
     }catch(err){
