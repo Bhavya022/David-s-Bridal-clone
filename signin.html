@@ -345,15 +345,7 @@
 
     form.addEventListener("submit", (e) => {
       e.preventDefault()
-
-
-
-      
-
-
-      
-
-      LoginUser()
+ LoginUser()
 
     })
 
@@ -362,24 +354,37 @@
 
       var email = document.getElementById("email").value;
   var pass = document.getElementById("pass").value;
-  console.log(email);
-  console.log(pass)
+  // console.log(email);
+  // console.log(pass) 
+    
         try { 
           let res = await fetch(`https://main-server-qat8.onrender.com/users`)
             
-
+        
           let data = await res.json();
           // localStorage.setItem("localAccessToken", data.username);
           // localStorage.setItem("userId", data.user.password) 
           let flag = false;
           for (let i of data) {
             if (i.email == email && i.pass == pass) {
+              localStorage.setItem("userName",(i.fname))
               flag=true;
               break;
             }
-          }
-          if(flag){
-            alert("user successfully logged in.");
+          } 
+          console.log(email)
+          if(flag){ 
+            console.log(email)
+            if(email.includes("admin")){
+               alert("Admin Login SuccessFully")
+               window.location.href="./admin.html"
+             } 
+             else{
+              
+               alert("user successfully logged in."); 
+
+                 window.location.href="./index.html"
+             }
           }
           else{
             alert("user not found");
