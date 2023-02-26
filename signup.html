@@ -315,15 +315,21 @@ h4{
          <br>
           <input type="checkbox" id="checkbox"/><label>I Agree</label>
           <div class="inputField">                                                                                                                   
-          <input type="submit" id="sub"value="Create an Account"/>
-          </div><br><br> 
+          <input type="submit" onclick="color()" id="sub"value="Create an Account"/>
+          </div><br>
+          <P ><span><u>forgot password?</u></span></P> 
+      <p ><h4 >Already have an account?<a href="./signin.html"><span id="s"><u id="s">SignIn</u></span></a></h4></p><br><br><br>
+      
            </form> 
 
 
 </div> 
 
     </div> 
-    <script>
+    <script> 
+    function color(){
+      document.getElementById("sub").style.backgroundColor="Green";
+    }
         var googleUser = {};
         var startApp = function() {
           gapi.load('auth2', function(){
