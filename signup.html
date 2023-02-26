@@ -417,11 +417,11 @@ h4{
           try{ 
           let obj = {
             email:email, 
-            fname:fname,
+            name:fname,
             lname:lname,
             mobile:mobile,
-            dob:dob,
-            pass:pass,
+      
+            password:pass,
           }  
           let register_request = await fetch(`https://main-server-qat8.onrender.com/users`,{
         method : 'POST',
@@ -431,9 +431,8 @@ h4{
         body : JSON.stringify(obj)
       }) 
       if(register_request.ok==true){
-        console.log("user registered") 
-        window.location.href=".\signin.html"
-        console.log("user registered")
+        alert("user registered successfully") 
+        window.location.href="./signin.html"
       } 
       else{
         console.log("Aww....")
