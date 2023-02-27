@@ -1,5 +1,7 @@
 
 
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -315,15 +317,21 @@ h4{
          <br>
           <input type="checkbox" id="checkbox"/><label>I Agree</label>
           <div class="inputField">                                                                                                                   
-          <input type="submit" id="sub"value="Create an Account"/>
-          </div><br><br> 
+          <input type="submit" onclick="color()" id="sub"value="Create an Account"/>
+          </div><br>
+          <P ><span><u>forgot password?</u></span></P> 
+      <p ><h4 >Already have an account?<a href="./signin.html"><span id="s"><u id="s">SignIn</u></span></a></h4></p><br><br><br>
+      
            </form> 
 
 
 </div> 
 
     </div> 
-    <script>
+    <script> 
+    function color(){
+      document.getElementById("sub").style.backgroundColor="Green";
+    }
         var googleUser = {};
         var startApp = function() {
           gapi.load('auth2', function(){
@@ -417,11 +425,11 @@ h4{
           try{ 
           let obj = {
             email:email, 
-            fname:fname,
+            name:fname,
             lname:lname,
             mobile:mobile,
-            dob:dob,
-            pass:pass,
+      
+            password:pass,
           }  
           let register_request = await fetch(`https://main-server-qat8.onrender.com/users`,{
         method : 'POST',
@@ -431,9 +439,8 @@ h4{
         body : JSON.stringify(obj)
       }) 
       if(register_request.ok==true){
-        console.log("user registered") 
-        window.location.href=".\signin.html"
-        console.log("user registered")
+        alert("user registered successfully") 
+        window.location.href="./signin.html"
       } 
       else{
         console.log("Aww....")
@@ -461,3 +468,4 @@ RegisterUser();
 </body> 
 
 </html>
+

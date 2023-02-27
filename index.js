@@ -1,3 +1,17 @@
+var getSidebar = document.querySelector('nav');
+var getToggle = document.getElementsByClassName('toggle');
+for (var i = 0; i <= getToggle.length; i++) {
+    getToggle[i].addEventListener('click', function () {
+        getSidebar.classList.toggle('active');
+    });
+}
+
+
+
+
+
+
+
 window.onscroll = function() {myFunction()};
 
 var navbar = document.getElementById("navbar");
@@ -42,3 +56,17 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
 }
+
+
+// SIDEBAR////
+// function toggleSidebar(ref){
+//   document.getElementById("sidebar").classList.toggle('active');
+// }
+
+
+
+
+
+
+
+

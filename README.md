@@ -39,8 +39,8 @@ We are here to help you make your home a better place to live in.
 
 Deployed link : 
 
-API link 1:  productApi='https://63f43aabfe3b595e2eef9ab6.mockapi.io/products'
-API link 2:  usersApi='https://63f43aabfe3b595e2eef9ab6.mockapi.io/users'
+API link 1:  productApi='https://main-server-qat8.onrender.com/product'
+API link 2:  usersApi='https://main-server-qat8.onrender.com/users'
 API link 3:
 
 

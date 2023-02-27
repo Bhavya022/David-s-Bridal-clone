@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -291,10 +290,10 @@ h4{
       </div>
       <p>Email and password are case sensitive</p>      
       <div class="inputField">                                                                                                                   
-      <input type="submit" id="sub"value="LOG IN WITH EMAIL"/>
+      <input type="submit" id="sub"value="LOG IN WITH EMAIL" onclick="color()"/>
       </div><br>
       <P ><span><u>forgot password?</u></span></P> 
-      <p ><h4 >Don't have an account?<span id="s"><u>Signup</u></span></h4></p><br><br><br>
+      <p ><h4 >Don't have an account?<a href="./signup.html"><span id="s"><u id="s">Signup</u></a></span></h4></p><br><br><br>
        </form>
 
 
@@ -302,49 +301,57 @@ h4{
 
     </div>
     <script> 
-      
+      function color(){
+      document.getElementById("sub").style.backgroundColor="Green";
+    }
       var submit = document.getElementById("sub"); 
       var form = document.getElementById("submit");
       
       
       form.addEventListener("submit",(e)=>{   
         e.preventDefault() 
- 
-
-        
-        var email =document.getElementById("email").value;
-      var pass = document.getElementById("pass").value; 
-
-        
-         async function LoginUser(){
-    const login_details = {
-      username : email,
-      password : pass,
-    }
-
-    try { 
-    let res = await fetch(`https://main-server-qat8.onrender.com/users`, {
-      method: "POST",
-      headers: {
-        "Content-type": "application/json",
-      },
-      body: JSON.stringify(login_details),
-    });
-
-    let data = await res.json();
-    console.log("login ", data);
-    localStorage.setItem("localAccessToken", data.username);
-    localStorage.setItem("userId", data.user.password)
-    alert("user successfully logged in.");
-  } catch (error) {
-    alert("Username/Password is wrong", JSON.stringify(error));
-  }
-  }
-        
-  LoginUser()   
+         LoginUser()   
    
       } )
-      
+      async function LoginUser(){
+
+var email =document.getElementById("email").value;
+var pass = document.getElementById("pass").value; 
+console.log(email,pass)
+try { 
+let res = await fetch(`https://main-server-qat8.onrender.com/users`)
+
+let data = await res.json();
+console.log("login ", data); 
+let flag=false;
+for(let i of data){ 
+  console.log(i,data)
+if(i.email==email && i.password==pass){  
+  localStorage.setItem("username",i.name)
+flag=true;
+break;
+}
+} 
+console.log(flag) 
+let Name=localStorage.getItem("username")
+if(flag){ 
+  // swal("Here's a message!", "It's pretty, isn't it?");
+alert("WELCOME"+" "+Name)  
+if(email.includes("admin")){
+  window.location.href="./admin.html"
+}
+else{
+window.location.href="./index.html" 
+}
+
+} 
+else{
+alert("not found")
+}
+} catch (error) {
+alert(error);
+}
+}
       
       </script>
 </body> 
