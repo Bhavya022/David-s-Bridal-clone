@@ -10,10 +10,15 @@ const usersApi='https://main-server-qat8.onrender.com/users';
 let product=document.getElementById("product");
 let addProduct=document.getElementById("addProduct");
 let customer=document.getElementById("customer");
-let orders=document.getElementById("orders");
+// let orders=document.getElementById("orders");
 let updateProduct=document.getElementById("updateProduct");
 let discount=document.getElementById("discount");
 let logout=document.getElementById("logout");
+let userNameData=localStorage.getItem("username");
+
+//username
+document.getElementById("userName").innerText+=userNameData;
+
 
 // nav id's end
 
@@ -255,14 +260,14 @@ function getCardCus(index,id,name,email,mobile){
 }
 async function deletingFunCus(id) {
     try {
-      let delete_request = await fetch(`${productApi}/${id}`, {
+      let delete_request = await fetch(`${usersApi}/${id}`, {
         method: "DELETE",
         headers: {
           'Content-type': 'application/json'
         }
       });
       if (delete_request.ok) {
-        alert("Item Removed")
+        alert("User Removed")
         fetchForCustomer(usersApi);
         
       }
@@ -274,9 +279,9 @@ console.log(error);
 
 
 //orders eventListner
-orders.addEventListener("click",()=>{
-    main.innerHTML="orders Page"
-})
+// orders.addEventListener("click",()=>{
+//     main.innerHTML="orders Page"
+// })
 //updateProduct
 updateProduct.addEventListener("click",()=>{
 fetchUpdateProduct(productApi);
@@ -416,3 +421,6 @@ formUpdate.addEventListener("submit",(e)=>{
 })
     }
 
+    logout.addEventListener("click",()=>{
+        window.location.href="./index.html"
+    })

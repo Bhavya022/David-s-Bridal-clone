@@ -137,8 +137,7 @@ text-align: center;
     position: relative;
     left: 4.6vw;
     width: 80%;
-    /* height: 30vh; */
-    /* border: 1px solid black; */
+    border-radius: 10px;
     height: 40vh;
     background-color: rgba(156, 215, 238, 0.137);
     box-shadow: 1px 1px 10px black;
@@ -153,9 +152,11 @@ text-align: center;
     height: 5vh;
     margin-bottom: 5vh;
     border-radius: 10px;
+    margin-top: 3vh;
   }
   .checkoutButton button:hover{
     border: 1px solid green;
-    color:green;
+    color:rgb(255, 255, 255);
     cursor: pointer;
+    background-color: green; 
   }

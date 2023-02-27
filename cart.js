@@ -1,6 +1,6 @@
-let arr = [14, 9, 10, 12, 11, 13,15];
+// let arr = [14, 9, 10, 12, 11, 13,15];
 
-localStorage.setItem("cart", JSON.stringify(arr));
+// localStorage.setItem("cart", JSON.stringify(arr));
 let lsData = JSON.parse(localStorage.getItem("cart")) || [];
 let leftSide = document.querySelector("#mainCard");
 let totalItem = document.getElementById("totalItem");
@@ -9,7 +9,7 @@ let totalPriceid=document.getElementById("totalPrice");
 let checkoutButton=document.querySelector(".checkoutButton");
 
 //fetching data
-let url = "https://63f43aabfe3b595e2eef9ab6.mockapi.io/products";
+let url = "https://main-server-qat8.onrender.com/product";
 let finalTotal=0;
 
 window.addEventListener("load", () => {
@@ -91,13 +91,13 @@ function cardData(item) {
   leftSide.innerHTML += card;
   totalItem.innerText = lsData.length;
   let removeFromCart = document.querySelectorAll(".removeProduct");
-totalPriceid.innerText=totalPrice
-let charge=document.getElementById("shippingCharge").innerText=totalPrice%10*10;
+totalPriceid.innerText=Math.floor(totalPrice)
+let charge=document.getElementById("shippingCharge").innerText=Math.floor(totalPrice%10*10);
 let gst=document.getElementById("gst");
 gst.innerText=(Math.floor((totalPrice*2)/100))
 let subTotal=document.getElementById("subTotal");
-subTotal.innerText=totalPrice%10*10+(Math.floor((totalPrice*2)/100))+totalPrice
-finalTotal=totalPrice%10*10+(Math.floor((totalPrice*2)/100))+totalPrice;
+subTotal.innerText=Math.floor(totalPrice%10*10+(Math.floor((totalPrice*2)/100))+totalPrice)
+finalTotal=Math.floor(totalPrice%10*10+(Math.floor((totalPrice*2)/100))+totalPrice);
 
   let productQuantity = document.querySelectorAll(".selectQuantity");
 
@@ -120,9 +120,9 @@ finalTotal=totalPrice%10*10+(Math.floor((totalPrice*2)/100))+totalPrice;
   }
 localStorage.setItem("totalAmmount",(subTotal.innerText))
 function calculatingFinal(data){
-  subTotal.innerText=data/2;
+  subTotal.innerText=Math.floor(data/2);
 
-  localStorage.setItem("totalAmmount",(data/2));
+  localStorage.setItem("totalAmmount",(Math.floor(data/2)));
   
 }
 
@@ -165,15 +165,16 @@ let coupon=document.getElementById("enterCoupon");
 formCoupon.addEventListener("submit",(e)=>{
   e.preventDefault();
 if(coupon.value=="bridal20"){
+  alert("Coupon Applied")
   // console.log(totalPrice);
-  totalPrice=(totalPrice -(Math.floor((totalPrice*20)/100)))
+  totalPrice=Math.floor(totalPrice -(Math.floor((totalPrice*20)/100)))
   totalPriceid.innerText=(totalPrice -(Math.floor((totalPrice*20)/100)));
   let charge=document.getElementById("shippingCharge")
   charge.innerText=totalPrice%10*10;
 let gst=document.getElementById("gst");
 gst.innerText=(Math.floor((totalPrice*2)/100))
 let subTotal=document.getElementById("subTotal");
-subTotal.innerText=totalPrice%10*10+(Math.floor((totalPrice*2)/100))+totalPrice
+subTotal.innerText=Math.floor(totalPrice%10*10+(Math.floor((totalPrice*2)/100))+totalPrice)
 localStorage.setItem("totalAmmount",(subTotal.innerText));
 }else{
   console.log("No")

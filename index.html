@@ -6,166 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bridal</title>
     <link rel="stylesheet" href="index.css">
-
-</head> 
-<style>
-    @font-face {
-    font-family: 'robotoregular';
-    src: url(../fonts/roboto-regular-webfont.woff) format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", "robotoregular", sans-serif;
-}
-
-body {
-    min-height: 100vh;
-    background: var(--bg-primary);
-}
-
-nav {
-    position: fixed;
-    width: 60px;
-    height: 100%;
-    background: var(--bg-secondary);
-    transition: .5s;
-    overflow: hidden;
-}
-
-nav.active {
-    width: 300px;
-}
-
-/* nav:hover {
-    width: 300px;
-} */
-
-nav ul {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-}
-
-nav ul li {
-    list-style: none;
-    width: 100%;
-    position: relative;
-
-}
-
-nav ul li a:hover {
-    color: var(--bg-primary);
-}
-
-nav ul li:hover a::before {
-    background-color: var(--bg-active);
-    width: 100%;
-}
-
-nav ul li a {
-    position: relative;
-    display: block;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: var(--cl-text);
-    transition: .2s;
-}
-
-nav ul li a::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    transition: .2s;
-}
-
-nav ul li a .icon {
-    position: relative;
-    display: block;
-    min-width: 60px;
-    height: 60px;
-    line-height: 60px;
-    text-align: center;
-}
-
-nav ul li a .title {
-    position: relative;
-    font-size: .85em;
-}
-
-nav ul li a .icon * {
-    font-size: 1.1em;
-}
-
-nav ul li a.toggle {
-    border-bottom: 3px solid var(--bg-primary);
-}
-
-.toggle {
-    cursor: pointer;
-}
-
-header {
-    display: none;
-}
-
-@media (max-width: 768px) {
-    header {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        height: 60px;
-        background: var(--bg-secondary);
-        color: var(--cl-text);
-    }
-
-    header a {
-        color: var(--cl-text)
-    }
-
-    nav {
-        left: -60px;
-    }
-
-    nav.active {
-        left: 0;
-        width: 100%;
-    }
-
-    nav ul li a.toggle {
-        display: none;
-    }
-}
-
-:root {
-    --bg-primary: #41444b;
-    --bg-secondary: #52575d;
-    --bg-active: #fddb3a;
-    --cl-text: #f6f4e6;
-}
-</style>
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"     rel="stylesheet">
    
 </head>
-
 <body>
-
-      
+    
 <!-------- HEADER-1 ---------->
 
 <div id="header1">
 <div class="primary">
     <div class="logo">
-        <a href="#">
+        <a href="./index.html">
             <img src="https://my.davidsbridal.com/db.svg" alt="error">
             </a>
     </div>
@@ -179,15 +30,7 @@ header {
     <div>
         <a href="#">
             <img src="images/Diamond.PNG" alt="error">
-            </a>
-    </div>
-
-
-
-
-
-
-
+        </a></div>
 </div>
 
 <div class="secondary">
@@ -212,51 +55,58 @@ header {
 </div>
 </div>
 
+
+<!-- SIDEBAR -->
+
+
+<!-- SIDEBAR -->
+
 <!--------- NAVBAR --------------->
 
+
 <div id="header2">
-    
-      
-    <header>
-        <div class="toggle">
+  
+  <!-- <div>
+    <img src="images/menu.PNG" alt="error">
+  </div> -->
+<header>
+        <div  class="toggle">
             <i class="fas fa-bars"></i>
         </div>
-        <h3>Dashboard</h3>
+        <h3>David's Bridal</h3>
         <a href="#">
             <i class="fas fa-sign-out-alt"></i>
         </a>
     </header>
     <nav>
+
+      <img src="images/menu.PNG" alt="error">
         <ul>
             <li>
-                <a class="toggle">
+                <a class="toggle" >
                     <span class="icon"><i class="fas fa-bars"></i></span>
-                    <span class="title">Menu</span>
+                    <span class="title"></span>
                 </a>
             </li>
-            <li>
-                <a href="#">
-                    <span class="icon"><i class="fas fa-home"></i></span>
-                    <span class="title">Home</span>
-                </a>
+            <li style="margin-top: 10vh;">
+                
+                <a href="./signup.html">
+                  <span class="icon"><i class="fas fa-info"></i></span>
+                  <span class="title">LOGIN/SIGNUP</span>
+              </a>
             </li>
             <li>
-                <a href="#">
+                <a href="./cart.html">
                     <span class="icon"><i class="fas fa-user"></i></span>
-                    <span class="title">Profile</span>
+                    <span class="title">CART</span>
                 </a>
             </li>
+
             <li>
-                <a href="#">
-                    <span class="icon"><i class="fas fa-envelope"></i></span>
-                    <span class="title">Messages</span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <span class="icon"><i class="fas fa-info"></i></span>
-                    <span class="title">Help</span>
-                </a>
+              <a href="./product_page.html">
+                <span class="icon"><i class="fas fa-home"></i></span>
+                <span class="title">PRODUCT</span>
+            </a>
             </li>
             <li>
                 <a href="#">
@@ -278,19 +128,27 @@ header {
             </li>
         </ul>
     </nav>
-    
+
+
+
+
+
+
+
+
+
     <div class="logo1">
-        <img src="https://my.davidsbridal.com/db.svg" alt="error">
+        <img src="" alt="">
     </div>
 
 
     <div id="navbar">
     
-        <a class="active" href="javascript:void(0)">SHOP</a>
-        <a href="javascript:void(0)">HOT DEALS</a>
+        <a class="active" href="./product page.html">SHOP</a>
+        <a href="./product page.html">HOT DEALS</a>
         <a href="javascript:void(0)">PLANNING</a>
         <a href="javascript:void(0)">ABOUT</a>
-        <a href="javascript:void(0)">BOOK APPOINTMENT</a>
+        <a href="./signup.html">BOOK APPOINTMENT</a>
         
       </div>
 
@@ -299,9 +157,16 @@ header {
       </div>
 
       <div class="utilities">
-        <img src="images/location.png" alt="error">
-        <img src="images/account.PNG" alt="error">
-        <img src="images/cart.PNG" alt="error">
+        <a href="">
+          <img src="images/location.png" alt="error">
+        </a>
+        
+        <a class="log" href="./signup.html"><img src="images/account.PNG" alt="error"></a>
+        
+        <a href="">
+          <img src="images/cart.PNG" alt="error">
+        </a>
+        
       </div>
 
 
@@ -309,6 +174,7 @@ header {
 <!--------- NAVBAR --------------->
 
 <div class="wedding">
+ 
     <div>
      <img src="images/wedding.PNG" alt="">
     </div>
@@ -471,6 +337,45 @@ header {
 
   <!--------------- SLIDESHOW ------------------------>
 
+  <!------CATEGORY--------->
+
+<link rel="preconnect" href="https://fonts.gstatic.com" />
+<link
+  href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dancing+Script:wght@700&display=swap"
+  rel="stylesheet"
+/>
+
+<link rel="stylesheet" href="style.css" />
+<section class="team">
+  <h2 class="section-heading">Shop By Category</h2>
+  <div class="container">
+    <div class="profile">
+    </div>
+    <div class="profile">
+      <img src="https://images.unsplash.com/photo-1523263685509-57c1d050d19b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fGJyaWRlJTIwZ293bnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="error"/><span class="name">Wedding Dresses</span>
+    </div>
+
+    <div class="profile">
+      <img src="https://images.unsplash.com/photo-1552223412-1a326064d46c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8YnJpZGVzbWFpZHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=540&q=60" alt=""/><span class="name">Bridesmaid Dresses</span>
+    </div>
+    <div class="profile">
+      <img src="https://images.unsplash.com/photo-1598808503746-f34c53b9323e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8dHV4ZWRvc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt=""/><span class="name">Tuxedo</span>
+    </div>
+    <div class="profile">
+      <img src="https://images.unsplash.com/photo-1631965004544-1762fc696476?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGpld2VsbGVyeXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=540&q=60" alt=""/><span class="name">Jewellery</span>
+    </div>
+    <div class="profile">
+      <img src="https://images.unsplash.com/photo-1549576215-49eb0555e432?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8d2VkZGluZyUyMHNob2VzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt=""/><span class="name">Shoes</span>
+    </div>
+    <div class="profile">
+      <img src="https://images.unsplash.com/photo-1592903297149-37fb25202dfa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8d2VkZGluZyUyMGdpZnRzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=530&q=60" alt=""/><span class="name">Gifts</span>
+    </div>
+  </div>
+</section>
+
+
+<!------CATEGORY-------->
+
 
   <div class="serve">
     <img src="images/serve.PNG" alt="">
@@ -583,7 +488,7 @@ header {
 </div>
 
 <div class="partners">
-  <div>
+  <div class="item">
     <a href="#">
      <img src="https://prod.davidsbridal.com/content/dam/aem-integration/brand/homepage/homepage-partner-feature-module_RESIZED.jpg" alt="error">
     </a>
@@ -591,7 +496,7 @@ header {
     <a href="#"><h5>LEARN MORE</h5></a>
   </div>
 
-  <div>
+  <div class="item">
     <a href="#">
       <img src="https://prod.davidsbridal.com/content/dam/aem-integration/brand/homepage/P303327_PTR_TWS_0401_v2.jpg" alt="error">
     </a>
@@ -599,7 +504,7 @@ header {
     <a href="#"><h5>LEARN MORE</h5></a>
   </div>
 
-  <div>
+  <div class="item">
     <a href="#">
       <img src="https://prod.davidsbridal.com/content/dam/aem-integration/brand/homepage/WS_content3CE_767x1147_honeymoon_1118c@2x_v2_RESIZED.jpg" alt="error">
     </a>
@@ -607,13 +512,17 @@ header {
     <a href="#"><h5>LEARN MORE</h5></a>
   </div>
 
-  <div>
+  <div class="item">
     <a href="#">
       <img src="https://prod.davidsbridal.com/content/dam/aem-integration/brand/homepage/GRP1_BLACK_LILTUX_FALL_22_070_Module_v2_RESIZED.jpg" alt="error">
     </a>
     <h2>little tuxedos</h2>
     <a href="#"><h5>LEARN MORE</h5></a>
   </div>
+</div>
+
+<div class="blooms">
+  <img src="images/blooms.PNG" alt="">
 </div>
 
 <!------ FOOTER ------->
@@ -631,6 +540,7 @@ header {
 <p>Your Account</p>
 <p>International Orders</p>
 <br>
+<br>
 <h4>OUR STORES</h4>
 <p >Find a Store</p>
 <p>Make an Appointment</p>
@@ -638,60 +548,51 @@ header {
 
 <div>
 
-<h4>Gift Cards</h4>
-<p>Buy Gift Cards</p>
-<p>Check Your Balance</p>
-<br>
-<h4>About Express</h4>
-<p>Overview</p>
-<p>Investor Relations</p>
-<p>ESG</p>
-<p>Careers</p>
-</div>
-
-<div>
-<h4>Popular Pages</h4>
-<p>Women's Clothing</p>
-<p>Men's Clothing</p>
-<p>Men's & Women's Jeans</p>
-<p>Women's Wear to Work</p>
-<p>Very Merry Velvet</p>
-<p>Women's Dresses</p>
-<p>Women's Editor Pants</p>
-<p>Women's Tops</p>
-
-</div>
-
-
-<div>
-<h4>Customer Service</h4>
+<h4>HELP</h4>
 <p>Contact Us</p>
-<p>Help</p>
-<p>Express Coupons</p>
-<p>Shipping Policy</p>
-<p>Returns Policy</p>
-<p>Student Discount</p>
-<p>Feedback</p>
-<p>Express Marketplace FAQ</p>
-<p>Klarna Payments</p>
-<p>Google Ad Price Policy</p>
-</div>
+<p>Help & FAQs</p>
 
 </div>
 
+<div>
+<h4>ABOUT</h4>
+<p>About David’s Bridal</p>
+<p>Quality & Craftsmanship</p>
+<p>Frontline Fierce</p>
+<p>Events</p>
+<p>Careers  </p>
+<p>Blog</p>
+<p>Media & Investor Relations</p>
+<p>Influencer Program</p>
+
+</div>
+
+<div class="diamond">
+<h4>REWARDS</h4>
+<div class="rewards">
+
+<div class="ring">
+  <img src="https://d1k0rbiro50qe0.cloudfront.net/footer/aside_0.svg" alt="error">
+</div>
+<div>
+  <h4>Diamond Loyalty Program</h4>
+  <p>*See Loyalty program <u>& restrictions</u> ,</p>
+  <p>gifts tier <u>descriptions & disclaimers</u></p>
+</div>
+</div>
+
+</div>
+</div>
 
 </div>
 <!-- ----FOOTER END --------->
 
+
+<div class="last">
+  <img src="images/last.PNG" alt="error">
+</div>
+
 </body>
 <script src="index.js"></script>
-<script>
-    var getSidebar = document.querySelector('nav');
-var getToggle = document.getElementsByClassName('toggle');
-for (var i = 0; i <= getToggle.length; i++) {
-    getToggle[i].addEventListener('click', function () {
-        getSidebar.classList.toggle('active');
-    });
-}
-</script>
+
 </html>
