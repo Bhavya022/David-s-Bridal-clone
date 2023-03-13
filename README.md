@@ -42,7 +42,7 @@ Deployed link :
 API link 1:  productApi='https://main-server-qat8.onrender.com/product'
 API link 2:  usersApi='https://main-server-qat8.onrender.com/users'
 API link 3:
-
+Mayank Bhandari,Sakshi Parmar,Ritik Rana,Bhavya Khatri
 
 
 
