@@ -1,10 +1,10 @@
-# quack-cloth-4807
+DAVID'S BRIDAL CLONE
 E-commerce website 
 Welcome to - 
-#  Bridal.com
+#  David's Bridal.com
  
- Bridal.com
-about us
+David's Bridal.com
+About us
 We live for coffee, pet videos, and celebrations! What started in 1950 as a single Florida bridal salon has grown into an international destination for weddings, proms, quinceañeras, and more. We know a bit about making dreams come true—one in three brides in the U.S. purchases her dress from us—and we can’t wait to help you get ready for the big event, party, gala, shindig, or soirée. 
 
 our mission
@@ -41,8 +41,10 @@ Deployed link :
 
 API link 1:  productApi='https://main-server-qat8.onrender.com/product'
 API link 2:  usersApi='https://main-server-qat8.onrender.com/users'
-API link 3:
-Mayank Bhandari,Sakshi Parmar,Ritik Rana,Bhavya Khatri
+Team Leader:-Bhavya Khatri 
+Member 1:-Ritik Rana 
+Member 2:-Mayank Bhandari 
+Member 3:-Sakshi Parmar
 
 
 
