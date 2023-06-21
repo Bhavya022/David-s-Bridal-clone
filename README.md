@@ -4,13 +4,20 @@ NETLIFY LINK:https://grand-cupcake-d7b423.netlify.app
 Welcome to - 
 #  David's Bridal.com
  
-David's Bridal.com
+David's Bridal.com 
+Home page 
+![Screenshot (159)](https://github.com/Bhavya022/quack-cloth-4807/assets/115460646/1b4d724e-000e-4d02-9925-445f7e85c954)
+
 About us
 We live for coffee, pet videos, and celebrations! What started in 1950 as a single Florida bridal salon has grown into an international destination for weddings, proms, quinceañeras, and more. We know a bit about making dreams come true—one in three brides in the U.S. purchases her dress from us—and we can’t wait to help you get ready for the big event, party, gala, shindig, or soirée. 
+Signup 
+![Screenshot (160)](https://github.com/Bhavya022/quack-cloth-4807/assets/115460646/95aba337-bc11-46e7-99ad-24c75663084e)
 
 our mission
 why we exist
 From Friday nights out to once-in-a-lifetime weddings, quinceañeras to anniversary dinners, we exist for magical moments.
+Login
+![Screenshot (161)](https://github.com/Bhavya022/quack-cloth-4807/assets/115460646/68fefc3f-39cf-471f-aeae-81019600dd25)
 
 24/7 INSPO ON YOUTUBE LIVE 
 like nowhere else
